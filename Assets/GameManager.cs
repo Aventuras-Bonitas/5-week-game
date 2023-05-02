@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    public float puntos = 0;
     public static GameManager Instance;
 
     private void Awake()
@@ -27,10 +27,11 @@ public class GameManager : MonoBehaviour
     }
 
     public GameState gameState = GameState.ingame;
-    public int puntos = 0;
+    
 
     public void Point()
     {
+        Debug.Log("Point!: "+ puntos.ToString());
         puntos += 1;
     }
 
